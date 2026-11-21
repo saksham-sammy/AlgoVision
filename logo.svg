@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <!-- Bar gradient 1 (indigo) -->
+    <linearGradient id="bar1" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" style="stop-color:#4338ca"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <!-- Bar gradient 2 (violet) -->
+    <linearGradient id="bar2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" style="stop-color:#6d28d9"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <!-- Bar gradient 3 (emerald - sorted) -->
+    <linearGradient id="bar3" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Logo border gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="2" y="2" width="116" height="116" rx="26" ry="26" fill="url(#bgGrad)"/>
+
+  <!-- Border ring -->
+  <rect x="2" y="2" width="116" height="116" rx="26" ry="26"
+        fill="none" stroke="url(#borderGrad)" stroke-width="2.5"/>
+
+  <!-- Baseline -->
+  <line x1="16" y1="88" x2="104" y2="88" stroke="rgba(99,102,241,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Bar 1 — short -->
+  <rect x="18" y="70" width="13" height="18" rx="3" ry="3" fill="url(#bar1)" filter="url(#glow)"/>
+
+  <!-- Bar 2 — medium -->
+  <rect x="36" y="56" width="13" height="32" rx="3" ry="3" fill="url(#bar1)" filter="url(#glow)"/>
+
+  <!-- Bar 3 — tallest (highlighted / sorted — emerald) -->
+  <rect x="54" y="36" width="13" height="52" rx="3" ry="3" fill="url(#bar3)" filter="url(#glow)"/>
+
+  <!-- Emerald glow under tall bar -->
+  <rect x="54" y="36" width="13" height="52" rx="3" ry="3"
+        fill="none" stroke="#34d399" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Bar 4 — medium-tall -->
+  <rect x="72" y="48" width="13" height="40" rx="3" ry="3" fill="url(#bar2)" filter="url(#glow)"/>
+
+  <!-- Bar 5 — short -->
+  <rect x="90" y="64" width="13" height="24" rx="3" ry="3" fill="url(#bar2)" filter="url(#glow)"/>
+
+  <!-- Comparison arc / sweep line (amber accent) -->
+  <path d="M 24.5 69 Q 60 28 95.5 63" fill="none" stroke="#f59e0b"
+        stroke-width="1.8" stroke-linecap="round" stroke-dasharray="4,3" opacity="0.75"/>
+
+  <!-- Small dot on the arc apex (pointer) -->
+  <circle cx="60" cy="30" r="3" fill="#fbbf24" filter="url(#glow)" opacity="0.9"/>
+</svg>

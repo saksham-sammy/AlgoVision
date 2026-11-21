@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+.vercel/
+.vscode/
+.idea/
+*.exe
+*.out
+*.o
+.DS_Store
+Thumbs.db
+
+# Local tooling & environment
+.env.*
+!.env.example
+!.env.template
+AGENTS.md
+GEMINI.md
+CLAUDE.md
+.cursorrules
+AI_SHARED_MEMORY.md
+.gitpulse/
